@@ -1,5 +1,7 @@
 import './App.css';
 import HelloWorld from './components/HelloWorld'
+import SayMyName from './components/SayMyName'
+import Pessoa from './components/Pessoa'
 
 function App() {
   const name = "Gabriel"
@@ -14,13 +16,19 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Olá React!</h1>
       <p>Meu primeiro APP em React! =D</p>
-      <br></br>
-      <h2>Alterando o JSX</h2>
-      <p>Olá, {newName}; Soma: {2 + 2}; Func: {sum(5, 5)}</p>
+      <p>Alterando o JSX. Olá, {newName}; Soma: {2 + 2}; Func: {sum(5, 5)}</p>
       <img src={url} alt=""></img>
+      
       <HelloWorld/>
+      <SayMyName nome="Gabriel"/>
+      <SayMyName nome={newName}/> <br />
+      <Pessoa 
+        nome="Gabriel" 
+        idade="20" 
+        profissao="Desenvolvedor" 
+        foto="https://via.placeholder.com/150"
+      />
     </div>
   );
 }
