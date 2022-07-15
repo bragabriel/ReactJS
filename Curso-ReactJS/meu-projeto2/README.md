@@ -4,6 +4,8 @@
 
 ## Conhecimentos trabalhados neste projeto:
 - Events (onClick, onChance & onSubmit);
+- Hook and UseState;
+- Events by props;
 
 <hr></hr>
 
