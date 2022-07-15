@@ -1,4 +1,15 @@
 /* CSS Global */
 body {
-  padding:50px
+  padding:50px;
+  padding-bottom: 500px;
+  background-color: #efefef;
+}
+
+h1{
+  color: #333;
+}
+
+p{
+  background-color: #999;
+  padding: 10px;
 }
