@@ -5,6 +5,9 @@ import Pessoa from './components/Pessoa'
 import Frase from './components/Frase'
 import List from './components/List'
 import OutraLista from './components/OutraLista';
+import {useState} from 'react'
+import SeuNome from './components/SeuNome'
+import Saudacao from './components/Saudacao'
 
 function App() {
   const name = "Gabriel"
@@ -20,6 +23,9 @@ function App() {
   
   /* Lista */
   const meusItens = ['React', 'Vue', 'Angular']
+
+  /* State Lift */
+  const [nome, setNome] = useState()
 
   return (
     <div className="App">
@@ -38,10 +44,16 @@ function App() {
       />
       <Frase/>
       <List/>
+
       <br />
       <h2>Renderização de Listas</h2>
       <OutraLista itens={meusItens}/>
       <OutraLista itens={[]}/>
+
+      <br />
+      <h2>State Lift</h2>
+      <SeuNome setNome={setNome}/>
+      <Saudacao nome={nome}/>
 
     </div>
   );
