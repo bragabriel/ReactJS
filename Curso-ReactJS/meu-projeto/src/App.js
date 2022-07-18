@@ -9,6 +9,13 @@ import {useState} from 'react'
 import SeuNome from './components/SeuNome'
 import Saudacao from './components/Saudacao'
 
+import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
+import Home from './pages/Home'
+import Empresa from './pages/Empresa'
+import Contato from './pages/Contato'
+import NavBar from './components/layout/NavBar';
+import Footer from './components/layout/Footer';
+
 function App() {
   const name = "Gabriel"
 
@@ -28,7 +35,18 @@ function App() {
   const [nome, setNome] = useState()
 
   return (
-    <div className="App">
+
+    <Router>
+
+      <NavBar/>
+      
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/contato" element={<Contato />} />
+        <Route path="/empresa" element={<Empresa />} />
+      </Routes>
+
+      <div className="App">
       <p>Meu primeiro APP em React! =D</p>
       <p>Alterando o JSX. Olá, {newName}; Soma: {2 + 2}; Func: {sum(5, 5)}</p>
       <img src={url} alt=""></img>
@@ -54,8 +72,12 @@ function App() {
       <h2>State Lift</h2>
       <SeuNome setNome={setNome}/>
       <Saudacao nome={nome}/>
-
     </div>
+    
+    <Footer />
+    </Router>
+
+    
   );
 }
 
