@@ -4,6 +4,7 @@ import SayMyName from './components/SayMyName'
 import Pessoa from './components/Pessoa'
 import Frase from './components/Frase'
 import List from './components/List'
+import OutraLista from './components/OutraLista';
 
 function App() {
   const name = "Gabriel"
@@ -15,6 +16,10 @@ function App() {
   }
 
   const url = 'https://via.placeholder.com/150'
+
+  
+  /* Lista */
+  const meusItens = ['React', 'Vue', 'Angular']
 
   return (
     <div className="App">
@@ -33,6 +38,11 @@ function App() {
       />
       <Frase/>
       <List/>
+      <br />
+      <h2>Renderização de Listas</h2>
+      <OutraLista itens={meusItens}/>
+      <OutraLista itens={[]}/>
+
     </div>
   );
 }
